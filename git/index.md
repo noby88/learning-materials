@@ -34,13 +34,13 @@ graph LR
 
 - If you make some changes and commit again, the next commit stores a pointer to the commit that came immediately before it.
 
-![](./images/commits-and-parents.png)
+![commit-and-parents](./images/commits-and-parents.png)
 
 ### 2.2 Labels (pointers)
 
 - A **branch** in Git is simply a lightweight movable **pointer** to one of these commits. The default branch name in Git is master. Every time you commit, the branch pointer moves forward automatically.
 
-![](./images/branch-and-history.png)
+![branch-and-history](./images/branch-and-history.png)
 
 ---
 
