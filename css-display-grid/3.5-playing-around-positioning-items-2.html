@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning</title>
+    <style>
+      .container {
+        display: grid;
+        width: max-content;
+        height: max-content;
+        gap: 0.2rem;
+        background-color: gainsboro;
+        border: solid;
+        grid-template-columns: 8rem 3rem 20rem 3rem 8rem;
+        grid-template-rows: 3rem 8rem 5rem;
+      }
+      .v1 {
+        grid-template-areas:
+          "header header header header header"
+          "main main main . side"
+          "footer footer footer footer footer";
+      }
+      .v2 {
+        grid-template-areas:
+          "header side side side side"
+          "header main main main footer"
+          "header main main main footer";
+      }
+      .header {
+        grid-area: header;
+        background-color: goldenrod;
+      }
+      .main {
+        grid-area: main;
+        background-color: brown;
+      }
+      .side {
+        grid-area: side;
+        background-color: cornflowerblue;
+      }
+      .footer {
+        grid-area: footer;
+        background-color: lightgreen;
+      }
+      .item {
+        display: grid;
+        color: gray;
+        font-size: 2rem;
+        align-content: center;
+        justify-content: center;
+      }
+      .template {
+        background-color: goldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Positioning</h1>
+    <section>
+      <h1>grid-template-areas</h1>
+      <div class="container v1">
+        <div class="item header">header</div>
+        <div class="item main">main</div>
+        <div class="item side">side</div>
+        <div class="item footer">footer</div>
+      </div>
+      <br />
+      <div class="container v2">
+        <div class="item header">header</div>
+        <div class="item main">main</div>
+        <div class="item side">side</div>
+        <div class="item footer">footer</div>
+      </div>
+    </section>
+    <section>
+      <h1>The grid temaplate:</h1>
+      <div class="container">
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+        <div class="item template"></div>
+      </div>
+    </section>
+    <br />
+  </body>
+</html>
