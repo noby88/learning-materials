@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid List</title>
+    <style>
+      .grid {
+        display: grid;
+        gap: 1rem;
+      }
+      .auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      }
+      .auto-fill {
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+      }
+      .item {
+        background-color: goldenrod;
+        height: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>auto-fit vs auto-fill</h1>
+    <section>
+      <h1>auto-fit:</h1>
+      <div class="grid auto-fit">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </section>
+    <section>
+      <h1>auto-fill:</h1>
+      <div class="grid auto-fill">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </section>
+  </body>
+</html>
