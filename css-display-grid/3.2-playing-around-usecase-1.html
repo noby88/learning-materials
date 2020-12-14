@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid List</title>
+    <style>
+      .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .grid {
+        display: grid;
+        gap: 1rem;
+        overflow: scroll;
+      }
+      .auto-flow {
+        grid-auto-flow: column;
+      }
+      .template-columns {
+        grid-template-columns: repeat(4, max-content);
+      }
+      .auto-fit {
+        /* auto-fit: does the same thing as auto-fit, except it does not collapses the unused columns */
+        grid-template-columns: repeat(auto-fill, 10rem);
+      }
+      .minmax {
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+      }
+      .item {
+        background-color: goldenrod;
+        height: 5rem;
+        width: 10rem;
+      }
+      .flex-item {
+        margin: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flex</h1>
+    <section>
+      <div class="flex">
+        <div class="item flex-item"></div>
+        <div class="item flex-item"></div>
+        <div class="item flex-item"></div>
+        <div class="item flex-item"></div>
+        <div class="item flex-item"></div>
+        <div class="item flex-item"></div>
+        <div class="item flex-item"></div>
+      </div>
+    </section>
+    <h1>Grid</h1>
+    <section>
+      <h1>grid-auto-flow:</h1>
+      <div class="grid auto-flow">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </section>
+    <section>
+      <h1>grid-template-columns:</h1>
+      <div class="grid template-columns">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </section>
+    <section>
+      <h1>grid-template-columns - auto-fit:</h1>
+      <div class="grid auto-fit">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </section>
+    <section>
+      <h1>grid-template-columns - minmax:</h1>
+      <div class="grid minmax">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </section>
+  </body>
+</html>
