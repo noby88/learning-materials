@@ -6,7 +6,7 @@ import FullCircle from '../../basic/circle/FullCircle';
 import { IState } from '../../../store';
 
 import { Container } from './styled';
-import SumUpFunny from '../sumUpFunny/SumUpFunny';
+import SumUpFunny from '../../pages/sumUpFunny/SumUpFunny';
 
 const steps: { [key: number]: () => JSX.Element } = {
   0: FullCircle,
