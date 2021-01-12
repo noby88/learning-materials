@@ -13,10 +13,10 @@
       .grid {
         display: grid;
         gap: 1rem;
-        overflow: scroll;
       }
       .auto-flow {
         grid-auto-flow: column;
+        overflow: scroll;
       }
       .template-columns {
         grid-template-columns: repeat(4, max-content);
@@ -24,9 +24,6 @@
       .auto-fill {
         /* auto-fit: does the same thing as auto-fit, except it does not collapses the unused columns */
         grid-template-columns: repeat(auto-fill, 10rem);
-      }
-      .minmax {
-        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
       }
       .item {
         background-color: goldenrod;
@@ -79,18 +76,6 @@
     <section>
       <h1>grid-template-columns - auto-fill:</h1>
       <div class="grid auto-fill">
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"></div>
-      </div>
-    </section>
-    <section>
-      <h1>grid-template-columns - minmax:</h1>
-      <div class="grid minmax">
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
